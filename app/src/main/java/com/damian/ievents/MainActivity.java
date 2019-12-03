@@ -19,12 +19,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Email = (EditText)findViewById(R.id.);
+        Email = (EditText)findViewById(R.id.editText2);
+        Password = (EditText)findViewById(R.id.editText);
+        login = (Button)findViewById(R.id.button);
         login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, loginGroup.class);
-                startActivity(intent);
+                openActivity();
             }
         });
+    }
+    public void openActivity() {
+        String text = Email.getText().toString();
+        int number = Integer.parseInt(Password.getText().toString());
+        Intent intent = new Intent(MainActivity.this, loginGroup.class);
+        intent.putExtra("text", text);
+        intent.putExtra("password", number);
+        startActivity(intent);
     }
 }
