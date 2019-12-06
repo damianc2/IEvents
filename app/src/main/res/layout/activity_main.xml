@@ -9,28 +9,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#A4C8D0"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:textColor="@color/cardview_dark_background"
+            android:text="Login Page" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="email" />
+            android:layout_gravity="center_horizontal"
+            android:hint="email"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="password" />
+            android:layout_gravity="center_horizontal"
+            android:hint="password"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="login" />
 
     </LinearLayout>
