@@ -2,4 +2,9 @@
     <string name="app_name">IEvents</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string-array name="eventtypes">
+        <item>RSOEvents</item>
+        <item>CampusEvents</item>
+        <item>SportsEvents</item>
+    </string-array>
 </resources>

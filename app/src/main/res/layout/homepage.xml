@@ -39,7 +39,7 @@
         android:layout_height="100dp" />
 
     <Button
-        android:id="@+id/joingroup"
+        android:id="@+id/RSOEvents"
 
         android:text="JoinGroups"
         android:textColor="#F2F2F0"
@@ -58,7 +58,7 @@
         android:layout_height="100dp" />
 
     <Button
-        android:id="@+id/makegroup"
+        android:id="@+id/SportsEvents"
 
         android:text="MakeGroups"
         android:textColor="#F2F2F0"

@@ -7,6 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -28,6 +38,30 @@ public class MainActivity extends AppCompatActivity {
                 openActivity(Email.getText().toString(), Password.getText().toString());
             }
         });
+    }
+    public void login() {
+        StringRequest string = new StringRequest(Request.Method.POST, "http://169.254.129.16/loginapp/login.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+
+    }) {
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("username", "Damian");
+                params.put("password", "passw");
+                return params;
+            }
+
+        };
+        Volley newRequestQueue(this).add(request);
     }
     private void openActivity(String username, String password) {
         if (username.contains("@illinois.edu")) {
