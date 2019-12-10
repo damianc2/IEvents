@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        startActivity(new Intent(getApplicationContext(), regularUser.class));
+                        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
                         Toast.makeText(getApplicationContext(), " this is response : " + response, Toast.LENGTH_SHORT).show();
 
                     }
@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openActivity(String username, String password) {
         if (password.contains("damianc2") && username.contains("@illinois.edu")) {
-            Intent intent = new Intent(this, userStorage.class);
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
             intent.putExtra("extra message", username);
             startActivity(intent);
         }
         if (username.contains("@illinois.edu") && !password.equals("damianc2")) {
-            Intent intent = new Intent(MainActivity.this, regularUser.class);
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
             startActivity(intent);
         } else if (username.length() == 0) {
             Email.setError("enter Email");

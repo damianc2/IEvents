@@ -23,10 +23,15 @@ public class userStorage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_storage);
         Intent intent = getIntent();
+
         String message = intent.getStringExtra("extra message");
+
         ListView listView = findViewById(R.id.listv);
+
         String[] sampleUsers = {"dam5", "jar3", "bob2"};
+
         arraylist = new ArrayList<>(Arrays.asList(sampleUsers));
+
         adapt = new ArrayAdapter<String>(this, R.layout.itemlist, R.id.txtitem, arraylist);
         listView.setAdapter(adapt);
         txtinput = (EditText)findViewById(R.id.txtinput);

@@ -24,29 +24,9 @@ public class regularUser extends AppCompatActivity {
                 Campus();
             }
         });
-        RSOEvents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RSO();
-            }
-        });
-        SportsEvents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Sports();
-            }
-        });
     }
     private void Campus() {
-        Intent intent = new Intent(this, CampusEvents.class);
-        startActivity(intent);
-    }
-    private void RSO() {
-        Intent intent = new Intent(this, RSOEvents.class);
-        startActivity(intent);
-    }
-    private void Sports() {
-        Intent intent = new Intent(this, SportsEvents.class);
+        Intent intent = new Intent(this, homeFragment.class);
         startActivity(intent);
     }
 }

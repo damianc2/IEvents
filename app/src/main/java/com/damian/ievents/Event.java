@@ -1,11 +1,21 @@
 package com.damian.ievents;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 
+@Entity(tableName = "events")
 public class Event {
+    @PrimaryKey@NonNull
     private String name;
+    @ColumnInfo(name = "description")
     private String description;
-    private Date date;
+    @ColumnInfo(name = "date")
+    private String date;
+    @ColumnInfo(name = "time")
     private String time;
 
     public String getDescription() {
@@ -20,15 +30,15 @@ public class Event {
         return name;
     }
 
-    public void setEmail(String Email) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setPassword(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

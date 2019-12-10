@@ -1,4 +1,4 @@
-package com.damian.ievents;
+/*package com.damian.ievents;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -75,4 +75,4 @@ public class Group{
     public void removeUser(Event event) {
         events.remove(event);
     }
-}
+}*/
