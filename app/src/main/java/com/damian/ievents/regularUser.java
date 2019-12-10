@@ -21,19 +21,19 @@ public class regularUser extends AppCompatActivity {
         CampusEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Campus();
             }
         });
         RSOEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                RSO();
             }
         });
         SportsEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Sports();
             }
         });
     }

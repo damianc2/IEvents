@@ -2,6 +2,17 @@
     <string name="app_name">IEvents</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="textOne">
+        <br>
+            Description: U of I vs. Michigan
+        \n</br>
+        <br>
+            Where: State Farm Center
+        \n</br>
+        <br>
+            When: 7pm on 12/5/2018
+        \n</br>
+    </string>
     <string-array name="eventtypes">
         <item>RSOEvents</item>
         <item>CampusEvents</item>
