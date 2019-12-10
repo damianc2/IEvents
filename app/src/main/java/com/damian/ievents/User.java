@@ -1,5 +1,6 @@
 package com.damian.ievents;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -7,13 +8,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class User {
-    @Entity
+    @Entity(tableName = "Events")
     public class Note implements Serializable {
 
         @PrimaryKey(autoGenerate = true)
         private String email;
+        @ColumnInfo(name = "Password")
         private String password;
-
+        @ColumnInfo(name = "user_GroupNames")
         private ArrayList<String> GroupNames;
 
         public String getEmail() {
